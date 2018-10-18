@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Synchrony Survey2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+
+    <header class="container-fluid">
+
+        <div class="label float-sm-left float-right text-right text-sm-left mt-3 text-light font-italic" style="width: 12rem;">
+            Already a member?
+            <button type="button" role="button" class="btn btn-primary btn-lg float-sm-left float-right">Log in</button>
+        </div>
+
+        <div class="row  d-flex justify-content-end">
+
+            <div class="label float-right logo">
+                <img class=".img-fluid" src="../images/My Post1.png" alt="" srcset="">
+            </div>
+
+        </div>
+    </header>
+
+
+
+    <div class="jumbotron col-md-6 mt-4 py-3">
+        <!-- hidden until first questions are answered -->
+        <h1 class="text-center mb-md-4">Finally, let's upload your best picture and meet your sync!</h1>
+        <div class="container col-12 hide" id="hidden">
+            <div class="row">
+                <div class="col-6 d-flex justify-content-center">
+                    <img id="userImg" style="height: 150px;" class="img-thumbnail " src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN0AAAB0CAMAAAA2CccOAAAAaVBMVEX///8AAADj4+Pe3t4zMzPR0dHu7u78/Pxra2vp6en5+fmSkpLx8fFiYmIfHx/IyMgPDw+ysrK6urpcXFx6enopKSmgoKCMjIzCwsJCQkJXV1cZGRnX19d0dHQ7OzuZmZlOTk6CgoKpqamfCpmIAAAD5ElEQVR4nO2d27KqMAyGgXIQRBEUFcQDvv9DLhi3bpWkFHRsk+G7Xs7kH9o0p3ZZ1sQ3iEJHCMcJI92GfJcgdtLjxc3zZUueu8V6nomYhcrqejzYEOtz5ug27kOupQtKu1EsroFuC0cjNhJld2ZerNvOMYgaXpEdFpluUwfjz1dq2louiW5zh5HIthvAjpKDmQ/T1uB6um1WJRz44W7MabjP6jRGXOM9dRuugjdOWyvP/PAlWY5WZ/7XE4qHHMxct/ly/I/E2XaqW4CMaPaZONsNdUuQcP5QnNFbL/xYnG2be6rLcgJ3l1VOg5cepV51oVsERoIGzsX5ZT9VmxyXt9dlvpygxgyuOzGyWKDqdjps78fH7AXd/BaVZ2Y2e4WNXV3hP0f9q5lL8zJspQXY2Xj8qdWKRLCnKNAfCMS1nH5otDIeHIRJigrIAZL7vzNamRQ0tZb8AsmVDiYe6KATXEothdUZGUqDPlAeNhawOsTJagVUJ6Q/QTbe+UcWDwE67nqCxh2szsQctur6zFWPfyCkzurW+Y49RTxCKxM4EvoSbUJexQre4/4+zx7A4mwzuyb+a5m2d4FlsLhl9QtjR1D/Dx1PvV8gQnI819iSe3UuWwNX67S/qbNHFmb5AzvHEsV+6Ku0/COsl2JiIDaU4IiIs01MEYaCZPK2vTF226mDllXkWQUN4GSwxci6wyACSefZ5EaCErGkZm1kBD0Ev8TFrc0sZqqT4NrsXJ7tmo90SsfMQq0yMd4/sA1NfdTxkIyOhbi9pLFF3l3K+860v1yA1Ij+QTsziNGcoOVEO7qUz3qUlAYYu+Bd55aaeIQiE+fS3nJ4CaXlQj36cvBx1BXxU67ZdHjGQ9xXtlSouBn5XNWy1pg42uHJDR/JeXLi+c4NpPxVMFiVFtalK6gfBDfghHVJ7HIMhgNmrIZO8g1GgEc58cjyAajOyNb4GKCVeTC1vToYyKsQuBOjClBxMLPvPwqg+KzbpG/SGbrlEF8+EG+BZsHlOLiRvcjLmYQpD/ZPZ57LTVxz6D26rVseqcE7zj7NEg7TGhMTExMTExMMiap0N1tstgnHQCyb3W+aXHa88h/LCl9KKzmjukOD9/6cDPmO5BNA53Wr26avEUN3mdksTnB+aslgcL0lgsSxKbVjvUke1WikaX5gUTtysMfFWLhNDxs4ZbHx0OfFag5e08PUsYhX4L4yl30XIa+uEJ8UvoMMDLs8xlWQETiDX0UbBLw0eXy6xmtCQ3CyR2VoAdyTLBlVHzo3JVesGl3pazi24JEfPKie7lrkKTNxlhWI+pS3/z6g3DPacs/EQnAs1erjD0O9KHOg5zMAAAAAAElFTkSuQmCC"
+                        alt="" srcset="">
+                   
+
+                </div>
+                <div class="col-6 d-flex justify-content-center">
+                    <img style="height: 150px;" class="img-thumbnail " src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN0AAAB0CAMAAAA2CccOAAAAaVBMVEX///8AAADj4+Pe3t4zMzPR0dHu7u78/Pxra2vp6en5+fmSkpLx8fFiYmIfHx/IyMgPDw+ysrK6urpcXFx6enopKSmgoKCMjIzCwsJCQkJXV1cZGRnX19d0dHQ7OzuZmZlOTk6CgoKpqamfCpmIAAAD5ElEQVR4nO2d27KqMAyGgXIQRBEUFcQDvv9DLhi3bpWkFHRsk+G7Xs7kH9o0p3ZZ1sQ3iEJHCMcJI92GfJcgdtLjxc3zZUueu8V6nomYhcrqejzYEOtz5ug27kOupQtKu1EsroFuC0cjNhJld2ZerNvOMYgaXpEdFpluUwfjz1dq2louiW5zh5HIthvAjpKDmQ/T1uB6um1WJRz44W7MabjP6jRGXOM9dRuugjdOWyvP/PAlWY5WZ/7XE4qHHMxct/ly/I/E2XaqW4CMaPaZONsNdUuQcP5QnNFbL/xYnG2be6rLcgJ3l1VOg5cepV51oVsERoIGzsX5ZT9VmxyXt9dlvpygxgyuOzGyWKDqdjps78fH7AXd/BaVZ2Y2e4WNXV3hP0f9q5lL8zJspQXY2Xj8qdWKRLCnKNAfCMS1nH5otDIeHIRJigrIAZL7vzNamRQ0tZb8AsmVDiYe6KATXEothdUZGUqDPlAeNhawOsTJagVUJ6Q/QTbe+UcWDwE67nqCxh2szsQctur6zFWPfyCkzurW+Y49RTxCKxM4EvoSbUJexQre4/4+zx7A4mwzuyb+a5m2d4FlsLhl9QtjR1D/Dx1PvV8gQnI819iSe3UuWwNX67S/qbNHFmb5AzvHEsV+6Ku0/COsl2JiIDaU4IiIs01MEYaCZPK2vTF226mDllXkWQUN4GSwxci6wyACSefZ5EaCErGkZm1kBD0Ev8TFrc0sZqqT4NrsXJ7tmo90SsfMQq0yMd4/sA1NfdTxkIyOhbi9pLFF3l3K+860v1yA1Ij+QTsziNGcoOVEO7qUz3qUlAYYu+Bd55aaeIQiE+fS3nJ4CaXlQj36cvBx1BXxU67ZdHjGQ9xXtlSouBn5XNWy1pg42uHJDR/JeXLi+c4NpPxVMFiVFtalK6gfBDfghHVJ7HIMhgNmrIZO8g1GgEc58cjyAajOyNb4GKCVeTC1vToYyKsQuBOjClBxMLPvPwqg+KzbpG/SGbrlEF8+EG+BZsHlOLiRvcjLmYQpD/ZPZ57LTVxz6D26rVseqcE7zj7NEg7TGhMTExMTExMMiap0N1tstgnHQCyb3W+aXHa88h/LCl9KKzmjukOD9/6cDPmO5BNA53Wr26avEUN3mdksTnB+aslgcL0lgsSxKbVjvUke1WikaX5gUTtysMfFWLhNDxs4ZbHx0OfFag5e08PUsYhX4L4yl30XIa+uEJ8UvoMMDLs8xlWQETiDX0UbBLw0eXy6xmtCQ3CyR2VoAdyTLBlVHzo3JVesGl3pazi24JEfPKie7lrkKTNxlhWI+pS3/z6g3DPacs/EQnAs1erjD0O9KHOg5zMAAAAAAElFTkSuQmCC"
+                        alt="" srcset="">
+
+                </div>
+                <div class="container">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class=" text-muted">Upload Image</div>
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <span class="btn ">
+                                        Browse… <input type="file" id="imgInp">
+                                    </span>
+                                </span>
+                                <input type="text" class="form-control"hidden readonly>
+                            </div>
+                            <img  id='img-upload'/>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+        
+
+        
+        <button data-value="fourthPage" id="submit" type="button" class="btn btn-primary btn-md float-right">Submit</button>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+       
+    <script src="../assets/templogic.js"></script>
+  
+
+
+    
+    </body>
+    </html>

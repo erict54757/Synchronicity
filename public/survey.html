@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Synchrony Survey</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type= "text/css" href="assets/style.css"/>
+
+    
+
+       
+</head>
+
+<body>
+
+    <header class="container-fluid">
+
+        <div class="label float-sm-left float-right text-right text-sm-left mt-3 text-light font-italic" style="width: 12rem;">
+            Already a member?
+            <button type="button" role="button" class="btn btn-primary btn-lg float-sm-left float-right">Log in</button>
+        </div>
+
+        <div class="row  d-flex justify-content-end">
+
+            <div class="label float-right logo">
+                <img class=".img-fluid" src="../images/My Post1.png" alt="" srcset="">
+            </div>
+
+        </div>
+    </header>
+
+
+
+    <div class="jumbotron col-sm-7 my-5 py-4  p-0 p-sm-4 mb-0">
+       
+            <h1 class="  text-center">First, a little about you?</h1>
+            <hr>
+            <div class="panel panel-default">
+                <h4 class=" lead ">Personal Info</h4>
+                <div class="input-group input-group-sm mb-3" style="width:75%;">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text text-light" style="background-color:#2cafeb;" id="inputGroup-sizing-sm">Username</span>
+                    </div>
+                    <input type="text" id="userName" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-sm">
+                </div>
+
+                <div class="panel-body">
+                    Gender:
+                    <br />
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-primary" id="button-gender">
+                            <input type="radio" name="gender" value=1 autocomplete="off"> Male
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="radio" name="gender" value=2 autocomplete="off" /> Female
+                        </label>
+                    </div>
+                    <br />
+
+
+                    Age Group:
+                    <br />
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-primary" id="button-age">
+                            <input type="radio" name="age" value=1 autocomplete="off" /> < 18
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="radio" name="age" value=2 autocomplete="off" />18-25
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="radio" name="age" value=3 autocomplete="off" />25-50
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="radio" name="age" value=4 autocomplete="off" /> > 50
+                        </label>
+                    </div>
+                </div>
+          
+
+
+        <!-- hidden until first questions are answered -->
+        
+
+        </div>
+<!-- <br>    <a href="/survey1"  rel="noopener noreferrer" aria-disabled="true"> -->
+        <button data-value="firstPage" id="next" type="button" class="btn btn-primary btn-md float-right">Next</button>
+   <!-- </a> -->
+    </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="assets/templogic.js"></script>
+</body>
+
+</html>

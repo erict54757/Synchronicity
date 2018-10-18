@@ -1,0 +1,59 @@
+
+       
+       
+       body {
+            background-image: url(https://images.pexels.com/photos/427547/pexels-photo-427547.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+                opacity: .85;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position-x: center;
+
+
+        }
+        label{
+            background-color: #2cafeb;
+
+        }
+
+        .jumbotron {
+            position: absolute;
+            
+            /* or absolute */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .btn-primary {
+    color: #fff;
+    background-color: #2cafeb;
+    border-color: #357ebd; /*set the color you want here*/
+}
+@media screen and (max-width: 640px){
+    .logo{
+        display: none;
+    }
+    h1{
+        font-size: 20pt;
+    }
+  
+} 
+@media screen and (max-height: 600px){
+     .jumbotron {
+         
+             top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+}
+
+             
+             .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #2cafeb;
+    border-color: #285e8e; /*set the color you want here*/
+}
+
+  

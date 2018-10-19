@@ -1,15 +1,12 @@
 
 const radiosGender = document.getElementsByName('gender');
 const radiosAge = document.getElementsByName('age');
-
 const userName = $("#userName");
 let userNameInput = "";
 let genderValInput = "";
 let ageGroupInput = "";
 var scoreArr = [];
 var scoreArr2=[];
-
-
 
 
 let validateAndStore = {
@@ -20,15 +17,13 @@ let validateAndStore = {
             return $("#userName").focus();
         }
         if (userName.val().length === 0) {
-            alert("BOx Empty");
+            alert("Username us not valid");
 
             return $("#userName").focus();
         } else if (userName.val().length > 20) {
             alert("Username has too many characters");
             return $("#userName").focus();
-
-
-        }
+    }
        userNameInput = userName.val().trim().replace(/\s+/g, '');
         
         validateAndStore.validateGender();
@@ -113,15 +108,15 @@ let validateAndStore = {
         $.ajax ({
             type: "POST",
             url: "/survey111",
-            data: element,
+            data:{ score: element},
             dataType: "json"
     
         });
     });
     
-            // window.location.href = "/survey2";
+            window.location.href = "/survey2";
         }
-       console.log(userNameInput)
+      
        
     },  question5678: function score() {
         scoreArr2=[];
@@ -146,7 +141,21 @@ let validateAndStore = {
             // validation of all questions answered, highlight next question to be answered
         } if (scoreArr2.length < 4) {
             alert("You must answer all questions to proceed"); scoreArr2 = []; $(".word" + [number]).focus();
-        }if (scoreArr2.length===4){ window.location.href = "/survey3";}
+        }if (scoreArr2.length===4){
+            scoreArr2.forEach(element => {
+    
+                $.ajax ({
+                    type: "POST",
+                    url: "/survey111",
+                    data:{ score: element},
+                    dataType: "json"
+            
+                });
+            });
+            
+            
+            
+            window.location.href = "/survey3";}
        
         
     }
@@ -156,24 +165,68 @@ let validateAndStore = {
     $("#submit").click(function() {
     userPic= $("#userImg").attr("src")
     //   console.log(friend)
-         $.get("/survey33", function(data) {
-        console.log(data);
-        // if (data) {
-        //   $("#stats").show();
-        //   $("#name").text(data.name);
-        //   $("#role").text(data.role);
-        //   $("#age").text(data.age);
-        //   $("#force-points").text(data.forcePoints);
-        // }
+        
+      
 
         $.ajax ({
             type: "POST",
             url: "/survey333",
-            data: userPic,
+            data: {pic: userPic},
             dataType: "json"
     
         });
 
+        // analyze user profile against other profiles and post match
+         $.get("/survey33", function(data) {
+   
+  matchedGender=[]
+    
+        var accounts = [];
+        var accountsMatched= []
+    for ( k=0; k<data.friend.length-1; k++){
+        
+        // console.log(data.friend[i]);
+        if (data.friend[k].scores[0]!=data.friend[data.friend.length-1].scores[0]){
+            // console.log(data.friend[data.friend.length-1].scores[0])
+            // // console.log("friend not my gender")
+            matchedGender.push(data.friend[k])
+        }
+    }
+    console.log(matchedGender)
+    console.log(matchedGender.length)
+    console.log(matchedGender[0].scores)
+        for (var i=0; i<  matchedGender.length; i++ ){
+            accounts[i] = [];
+         for (j=2; j<matchedGender[i].scores.length; j++){
+        //      console.log(data.friend[i].scores[j]+ "all friends not my gender scores 3-8")
+            // array for holding differences of each members score
+            
+        //    console.log (data.friend[i].scores[j])
+           number= (Math.abs(data.friend[data.friend.length-1].scores[j]))-(Math.abs(matchedGender[i].scores[j]));
+        //    console.log(number)
+          accounts[i].push(Math.abs( number))
+        
+        }; 
+       accountsMatched.push( accounts[i].reduce((a, b) => a + b, 0));
+        
+console.log(matchedGender)
+
+    } 
+    console.log(accountsMatched);
+    // console.log(indexMatch)
+
+
+        
+      indexMatch= Math.min(...accountsMatched);
+    userMatchIndex=accountsMatched.indexOf(indexMatch);
+    $("#matchImg").attr("src",matchedGender[userMatchIndex].photo);
+    $("#displayMatchText").text(matchedGender[userMatchIndex].name+ ", cannot wait to meet you!")
+    $("#userName").text(data.friend[data.friend.length-1].name)
+    $("#matchName").text(matchedGender[userMatchIndex].name)
+    
+    // console.log(accountsMatched)
+        console.log(indexMatch)
+    console.log(userMatchIndex)
     });
 
 

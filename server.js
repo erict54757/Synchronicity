@@ -46,14 +46,14 @@ app.get("/", function(req, res) {
       ]
   })
     
-  console.log(friend.friend[friend.friend.length-1])
+  console.log(friend.friend)
     
   });
   // post question scores 1-8
   app.post("/survey111", function(req, res) {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body parsing middleware
-    let score = req.body;
+    let score = req.body.score;
     
 
 
@@ -72,26 +72,18 @@ app.get("/", function(req, res) {
   app.post("/survey333", function(req, res) {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body parsing middleware
-    var pic = req.body;
+    var pic = req.body.pic;
+//  console.log(friend.friend)
+  
+  console.log(pic)
+    friend.friend[friend.friend.length-1].photo=pic
+      
+      console.log(friend.friend[friend.friend.length-1])
+     
+      
 
-    friend.friend.push({
-      "name": "Ahmed",
-      "photo": pic,
-      "scores": [
-          5,
-          1,
-          4,
-          4,
-          5,
-          1,
-          2,
-          5,
-          4,
-          1
-      ]
-  })
     
-  console.log(friend.friend)
+ 
     
   });
 

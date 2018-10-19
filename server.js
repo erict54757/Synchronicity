@@ -5,7 +5,9 @@ var app = express();
 var friend = require('./app/data/friends.js');
 var path = require("path");
 
-var PORT = 8080;
+var PORT = process.env.PORT || 8080;
+
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

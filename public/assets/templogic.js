@@ -168,7 +168,7 @@ $("#submit").click(function () {
     //   console.log(friend)
 
 
-    $("#opClass").fadeTo("fast", 1)
+    $("#opClass").fadeTo("fast", 1);
     $.ajax({
         type: "POST",
         url: "/survey333",
